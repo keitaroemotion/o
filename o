@@ -1,0 +1,9 @@
+LINK="https://www.google.co.jp/search?q="
+
+for var in "$@"
+do
+    LINK="$LINK$var+"
+done
+
+LINK=${LINK%?}
+open "$LINK"
